@@ -1,0 +1,289 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNT工作室 - 产品展示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cherry: {
+                            50: '#FFF0F3',
+                            100: '#FFE1E6',
+                            200: '#FFC2CC',
+                            300: '#FFA3B3',
+                            400: '#FF8499',
+                            500: '#FF6680',
+                            600: '#FF4766',
+                            700: '#FF284D',
+                            800: '#E60033',
+                            900: '#B30028',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-cherry-50 min-h-screen flex flex-col">
+    <!-- 页眉 -->
+    <header class="bg-cherry-200 shadow-md sticky top-0 z-50 transition-all duration-300" id="header">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-cherry-800 font-bold text-2xl">TNT工作室</span>
+            </a>
+            
+            <!-- 搜索框 -->
+            <div class="relative max-w-md w-full">
+                <input type="text" placeholder="搜索产品..." class="w-full pl-10 pr-4 py-2 rounded-full bg-white border border-cherry-300 focus:outline-none focus:ring-2 focus:ring-cherry-400 transition-all">
+                <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-cherry-500">
+                    <i class="fa fa-search"></i>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <h1 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-center text-cherry-800 mb-8 text-shadow">我们的产品</h1>
+        
+        <!-- 产品展示网格 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- 产品卡片 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product1/400/300" alt="樱花主题笔记本" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold text-cherry-800 mb-2">樱花主题笔记本</h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">精美的樱花粉封面，搭配高品质纸张，书写流畅，是记录生活和灵感的理想选择。</p>
+                    <button class="w-full py-2 px-4 bg-cherry-400 hover:bg-cherry-500 text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <span>查看详情</span>
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 产品卡片 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product2/400/300" alt="樱花粉无线耳机" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold text-cherry-800 mb-2">樱花粉无线耳机</h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">时尚樱花粉配色，高品质音效，IPX4防水，适合运动和日常使用。</p>
+                    <button class="w-full py-2 px-4 bg-cherry-400 hover:bg-cherry-500 text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <span>查看详情</span>
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 产品卡片 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product3/400/300" alt="樱花主题手机壳" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold text-cherry-800 mb-2">樱花主题手机壳</h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">透明背板搭配樱花图案，完美保护手机同时展现个性，适用于多种机型。</p>
+                    <button class="w-full py-2 px-4 bg-cherry-400 hover:bg-cherry-500 text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <span>查看详情</span>
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 产品卡片 4 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product4/400/300" alt="樱花香薰蜡烛" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold text-cherry-800 mb-2">樱花香薰蜡烛</h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">天然大豆蜡制成，散发优雅樱花香气，营造舒适浪漫的居家氛围。</p>
+                    <button class="w-full py-2 px-4 bg-cherry-400 hover:bg-cherry-500 text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <span>查看详情</span>
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 产品卡片 5 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product5/400/300" alt="樱花粉保温杯" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold text-cherry-800 mb-2">樱花粉保温杯</h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">双层不锈钢设计，长效保温保冷，精致樱花粉外观，携带方便。</p>
+                    <button class="w-full py-2 px-4 bg-cherry-400 hover:bg-cherry-500 text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <span>查看详情</span>
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 产品卡片 6 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product6/400/300" alt="樱花主题键盘" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold text-cherry-800 mb-2">樱花主题键盘</h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">机械手感，樱花粉键帽，RGB背光，为你的桌面增添一抹亮色。</p>
+                    <button class="w-full py-2 px-4 bg-cherry-400 hover:bg-cherry-500 text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <span>查看详情</span>
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 产品卡片 7 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product7/400/300" alt="樱花粉雨伞" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold text-cherry-800 mb-2">樱花粉雨伞</h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">自动开合，防晒防雨两用，坚固耐用，精致樱花图案设计。</p>
+                    <button class="w-full py-2 px-4 bg-cherry-400 hover:bg-cherry-500 text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <span>查看详情</span>
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 产品卡片 8 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product8/400/300" alt="樱花主题鼠标垫" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold text-cherry-800 mb-2">樱花主题鼠标垫</h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">大尺寸防滑底设计，高精度表面，樱花图案印刷清晰，经久耐用。</p>
+                    <button class="w-full py-2 px-4 bg-cherry-400 hover:bg-cherry-500 text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <span>查看详情</span>
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 产品卡片 9 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product9/400/300" alt="樱花粉笔记本电脑" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold text-cherry-800 mb-2">樱花粉笔记本电脑</h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">轻薄便携，高性能处理器，长续航，时尚樱花粉外观设计。</p>
+                    <button class="w-full py-2 px-4 bg-cherry-400 hover:bg-cherry-500 text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <span>查看详情</span>
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 产品卡片 10 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product10/400/300" alt="樱花主题T恤" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold text-cherry-800 mb-2">樱花主题T恤</h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">柔软棉质，透气舒适，精致樱花图案印花，多种尺码可选。</p>
+                    <button class="w-full py-2 px-4 bg-cherry-400 hover:bg-cherry-500 text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <span>查看详情</span>
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 产品卡片 11 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product11/400/300" alt="樱花粉蓝牙耳机" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold text-cherry-800 mb-2">樱花粉蓝牙耳机</h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">小巧便携，高清通话，立体声效果，樱花粉外壳设计精美。</p>
+                    <button class="w-full py-2 px-4 bg-cherry-400 hover:bg-cherry-500 text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <span>查看详情</span>
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 产品卡片 12 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="relative h-52 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product12/400/300" alt="樱花主题水杯" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold text-cherry-800 mb-2">樱花主题水杯</h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">双层玻璃设计，隔热防烫，樱花图案印刷精美，适合办公室使用。</p>
+                    <button class="w-full py-2 px-4 bg-cherry-400 hover:bg-cherry-500 text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <span>查看详情</span>
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-cherry-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-sm">© 2025 TNT工作室. 保留所有权利.</p>
+                </div>
+                <div class="flex items-center">
+                    <span class="mr-2">加入我们的QQ群:</span>
+                    <a href="https://qm.qq.com/cgi-bin/qm/qr?k=Vp2fKX4WpGd8iK5VYJqF1c5Vp7vX0eJ7&amp;jump_from=webapi" target="_blank" class="flex items-center text-cherry-200 hover:text-white transition-colors">
+                        <i class="fa fa-qq mr-1"></i>
+                        <span>860111564</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 滚动时改变页眉样式
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'bg-cherry-300');
+                header.classList.remove('py-3', 'bg-cherry-200');
+            } else {
+                header.classList.add('py-3', 'bg-cherry-200');
+                header.classList.remove('py-2', 'bg-cherry-300');
+            }
+        });
+    </script>
+
+
+    </body></html>
